@@ -1,0 +1,123 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+:root {
+    --ff:'Fjalla One';
+    --clr-background:rgb(27, 38, 44);
+    --clr-text:rgb(187, 225, 250);
+    --clr-main:rgb(15, 76, 117);
+}
+body {
+    display:grid;
+    place-content: center;
+    background-color:var(--clr-background);
+    margin-top:3em;
+    font-family: var(--ff);
+
+}
+
+header{
+    margin-bottom:2em;
+    text-align: center;
+    color:var(--clr-main);
+    background-color: white;
+    width:30em;
+    border-radius: 2em;
+    box-shadow: rgba(74, 74, 83, 0.2) 0px 7px 29px 0px;
+}
+
+
+.hero{
+  background-color: var(--clr-main);
+  padding:1em;
+  border-radius: 1em;;
+}
+
+.input{
+  display:flex;
+  gap:1em;
+}
+.input button{
+  width:20%;
+  border-radius: 1em;
+  border-style: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+input{
+  width:80%;
+  border-radius: 1em;
+  border-style: none;
+  padding:0.5em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+ul{
+  margin-top: 2em;
+  display:grid;
+
+}
+li span:nth-child(1){
+  position:relative;
+}
+
+li {
+  list-style: none;
+  margin-top:1em;
+  background-color: white;
+  padding:0.5em;
+  border-radius: 1em;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+
+.crossed {
+  background-color: rgba(250, 250, 250, 0.7);
+  text-decoration: line-through;
+}
